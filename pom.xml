@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.vkrajput.learning</groupId>
 	<artifactId>learning-parent-module</artifactId>
@@ -108,7 +109,7 @@
         </dependency>
         </dependencies>
         <build>
-        <plugins>
+        <!--plugins>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
@@ -125,7 +126,7 @@
                     <forkCount>3</forkCount>
                     <reuseForks>true</reuseForks>
                     <excludes>
-                        <!--exclude>**/*IntegrationTest.java</exclude-->
+                        <exclude>**/*IntegrationTest.java</exclude>
                     </excludes>
                     <testFailureIgnore>true</testFailureIgnore>
                 </configuration>
@@ -139,7 +140,7 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
-        </plugins>
+        </plugins -->
     </build>
 	
 </project>
