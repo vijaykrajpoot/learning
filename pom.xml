@@ -19,7 +19,7 @@
 		</license>
 	</licenses>
 	<modules>
-		<!--module>learning-spring-data-es</module-->
+		<module>learning-spring-elasticsearch</module>
 	</modules>
 	<developers>
 		<developer>
