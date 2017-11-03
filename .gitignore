@@ -1,6 +1,8 @@
 # Misc file
 *.txt
-
+.project
+.settings/
+.springBeans
 # Compiled class file
 *.class
 
