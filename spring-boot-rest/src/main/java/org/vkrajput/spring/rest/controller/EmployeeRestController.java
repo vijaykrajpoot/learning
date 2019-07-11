@@ -11,7 +11,8 @@ import org.vkrajput.spring.service.EmployeeService;
 
 
 @RestController
-public class EmnployeeRestController {
+@RequestMapping("employees")
+public class EmployeeRestController {
 	
 	@Autowired
 	private EmployeeService employeeService;
