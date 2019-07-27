@@ -5,12 +5,12 @@
 	<parent>
 		<groupId>org.vkrajput.learning.spring.boot</groupId>
 		<artifactId>learning-spring-boot-parent</artifactId>
-		 <version>1.0.0</version>
+		<version>1.0.0</version>
 	</parent>
 	<groupId>com.springboot.rest</groupId>
 	<artifactId>spring-boot-rest</artifactId>
 	<name>spring-boot-rest</name>
-	<description>Spring Boot Rest</description>	
+	<description>Spring Boot Rest</description>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
