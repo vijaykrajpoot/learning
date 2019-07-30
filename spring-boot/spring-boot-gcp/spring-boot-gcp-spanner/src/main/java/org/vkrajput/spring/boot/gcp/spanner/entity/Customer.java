@@ -1,6 +1,7 @@
 package org.vkrajput.spring.boot.gcp.spanner.entity;
 
 import org.springframework.cloud.gcp.data.spanner.core.mapping.Column;
+import org.springframework.cloud.gcp.data.spanner.core.mapping.PrimaryKey;
 import org.springframework.cloud.gcp.data.spanner.core.mapping.Table;
 import lombok.Data;
 
@@ -8,7 +9,11 @@ import lombok.Data;
 @Data
 @Table(name="csc_customer")
 public class Customer {
-
+  
+  @PrimaryKey
+  @Column(name="CSC_CUSTOMER_ID")
+  private long customerId;
+  
   @Column(name = "USER_NAME", nullable = false, spannerTypeMaxLength = 255)
   private String userName;
 
