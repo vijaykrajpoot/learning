@@ -2,6 +2,7 @@ package com.springboot.kafka.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import com.springboot.kafka.model.Message;
 
 @Service
 public class MessagingService {
@@ -12,7 +13,7 @@ public class MessagingService {
   @Autowired
   private KafkaConsumer kafkaListener;
   
-  public void publish(String message) {
+  public void publish(Message message) {
     
     kafkaProducer.publish(message);
     

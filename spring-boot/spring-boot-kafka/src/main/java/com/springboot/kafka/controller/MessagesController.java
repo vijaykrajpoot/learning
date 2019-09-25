@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.springboot.kafka.service.KafkaConsumer;
+import com.springboot.kafka.model.Message;
 import com.springboot.kafka.service.MessagingService;
 
 
@@ -22,7 +22,7 @@ public class MessagesController {
   private MessagingService messagingService; 
   
   @PostMapping(path="/publish", consumes=MediaType.APPLICATION_JSON_VALUE,produces=MediaType.APPLICATION_JSON_VALUE)
-  public void publisMessage(@RequestBody String message) {
+  public void publisMessage(@RequestBody Message message) {
     logger.info("publisMessage Invoked:" + message);
     messagingService.publish(message);
       

@@ -28,6 +28,7 @@
 		<module>spring-boot-db-jpa</module>
 		<module>spring-boot-rest</module>
 		<module>spring-boot-gcp</module>
+		<module>spring-boot-kafka</module>
 	</modules>
 	<developers>
 		<developer>
@@ -53,6 +54,14 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.9</version>
+		</dependency>
+
+
 	</dependencies>
 	<build>
 		<!--plugins> <plugin> <groupId>org.codehaus.mojo</groupId> <artifactId>exec-maven-plugin</artifactId> <version>1.6.0</version> <configuration> <executable>maven</executable> </configuration> </plugin> 
