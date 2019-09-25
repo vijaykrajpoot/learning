@@ -14,12 +14,11 @@ public class EmployeeDao {
 
   @PostConstruct
   public void init() {
-
     Employee employee = Employee.builder().withAge("40")
         .withAddress(Address.builder().withAddressLine2("#1").withAddressLine1("110 E remington dr")
             .withAddressLine2("APT#1").withCity("SUNNYVALE").withState("CA").withPincode("54564654")
             .withCountry("USA").build())
-        .withId("1000").withName("vijay kumar rajpoot").build();
+        .withId("1000").withName("Vijay Kumar Rajpoot").build();
     employeeDB.put(employee.getId(), employee);
   }
 
