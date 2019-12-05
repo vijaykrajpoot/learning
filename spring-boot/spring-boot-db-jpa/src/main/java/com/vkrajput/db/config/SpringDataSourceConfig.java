@@ -1,7 +1,7 @@
 package com.vkrajput.db.config;
 
-import javax.sql.DataSource;
-
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
@@ -9,8 +9,7 @@ import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import lombok.Getter;
-import lombok.Setter;
+import javax.sql.DataSource;
 
 @Configuration
 @EnableAutoConfiguration(exclude = {DataSourceAutoConfiguration.class})
@@ -31,8 +30,7 @@ public class SpringDataSourceConfig {
 
 	@Bean
 	public DataSource dataSource() {
-		return DataSourceBuilder.create().driverClassName(driverClassName).url(url).username(username)
-				.password(password).build();
+		return DataSourceBuilder.create().driverClassName(driverClassName).url(url).username(username).password(password).build();
 	}
 
 }
