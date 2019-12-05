@@ -15,7 +15,7 @@ public class EmployeeService {
 	private EmployeeRepository employeeRepository;
 
 	public void addAEmployee(com.vkrajput.db.model.EmployeeDO employee) {
-		employeeRepository.save(turnmetoEntity(employee));
+		employeeRepository.save(turnMetoEntity(employee));
 	}
 
 	public void addEmployess(List<com.vkrajput.db.model.EmployeeDO> employees) {
@@ -25,8 +25,7 @@ public class EmployeeService {
 		}
 	}
 
-	private com.vkrajput.db.entity.Employee  turnmetoEntity(com.vkrajput.db.model.EmployeeDO employee) {
-
+	private com.vkrajput.db.entity.Employee  turnMetoEntity(com.vkrajput.db.model.EmployeeDO employee) {
 		com.vkrajput.db.entity.Employee employeeEntity = new com.vkrajput.db.entity.Employee ();
 		employeeEntity.setAge(employee.getAge());
 		employeeEntity.setFirstName(employee.getFirstName());
