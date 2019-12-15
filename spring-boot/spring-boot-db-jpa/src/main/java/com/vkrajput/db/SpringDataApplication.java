@@ -20,11 +20,11 @@ public class SpringDataApplication implements ApplicationRunner {
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
 		logger.info("Your application started with option names : {}", args.getOptionNames());
-		com.vkrajput.db.model.EmployeeDO employee = new com.vkrajput.db.model.EmployeeDO();
-		employee.setAge(12);
-		employee.setFirstName("Vijay");
-		employee.setLastName("Kumar");
-		employeeService.addAEmployee(employee);
+//		com.vkrajput.db.model.EmployeeDO employee = new com.vkrajput.db.model.EmployeeDO();
+//		employee.setAge(12);
+//		employee.setFirstName("Vijay");
+//		employee.setLastName("Kumar");
+//		employeeService.addAEmployee(employee);
 	}
 
 	public static void main(String[] args) throws Exception {
