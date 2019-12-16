@@ -1,7 +1,7 @@
 package com.vkrajput.db;
 
 import com.vkrajput.db.data.EmployeeRepository;
-import com.vkrajput.db.entity.Employee;
+import com.vkrajput.db.model.EmployeeDO;
 import com.vkrajput.db.service.EmployeeService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -30,13 +30,13 @@ public class EmployeeJPATest {
 
 
         employeeService.addAEmployee(Generator.generateEmployee());
-        List<Employee>  employees= employeeService.getEmployees();
+        List<EmployeeDO>  employees= employeeService.getEmployees();
         employees.forEach(employee -> System.out.println(employee));
     }
 
     @Test
     public void getAllEmployee(){
-     List<Employee>  employees= employeeService.getEmployees();
+     List<EmployeeDO>  employees= employeeService.getEmployees();
         employees.forEach(employee -> System.out.println(employee));
     }
 
