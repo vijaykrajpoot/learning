@@ -1,21 +1,23 @@
 package com.vkrajput.db;
 
 import com.vkrajput.db.data.EmployeeRepository;
+import com.vkrajput.db.entity.Employee;
 import com.vkrajput.db.service.EmployeeService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import java.util.List;
 
 
 @RunWith(SpringRunner.class)
-//@TestPropertySource(locations = "classpath:application-test.properties")
-@SpringBootTest(classes = {H2DataSourceConfig.class, SpringDataApplication.class})
-
-public class SpringBootDbJpaApplicationTests {
+@SpringBootTest(classes = {SpringDataApplication.class})
+//@ActiveProfiles("test")
+//@SpringBootApplication
+public class EmployeeJPATest {
 
     @Mock
     EmployeeRepository employeeRepository;
@@ -25,6 +27,18 @@ public class SpringBootDbJpaApplicationTests {
 
     @Test
     public void testSaveAEmployee() {
+
+
         employeeService.addAEmployee(Generator.generateEmployee());
+        List<Employee>  employees= employeeService.getEmployees();
+        employees.forEach(employee -> System.out.println(employee));
     }
+
+    @Test
+    public void getAllEmployee(){
+     List<Employee>  employees= employeeService.getEmployees();
+        employees.forEach(employee -> System.out.println(employee));
+    }
+
+
 }

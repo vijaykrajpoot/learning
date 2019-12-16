@@ -28,7 +28,8 @@ public class SpringDataSourceConfig {
 	@Value("${spring.datasource.driver-class-name}")
 	private String driverClassName;
 
-	@Bean
+
+	@Bean(name = "MySQLDataSource")
 	public DataSource dataSource() {
 		return DataSourceBuilder.create().driverClassName(driverClassName).url(url).username(username).password(password).build();
 	}

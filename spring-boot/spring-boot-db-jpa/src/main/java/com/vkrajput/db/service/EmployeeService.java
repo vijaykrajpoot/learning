@@ -1,12 +1,12 @@
 package com.vkrajput.db.service;
 
-import java.util.Iterator;
-import java.util.List;
-
+import com.vkrajput.db.data.EmployeeRepository;
+import com.vkrajput.db.entity.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.vkrajput.db.data.EmployeeRepository;
+import java.util.Iterator;
+import java.util.List;
 
 @Service
 public class EmployeeService {
@@ -16,6 +16,11 @@ public class EmployeeService {
 
 	public void addAEmployee(com.vkrajput.db.model.EmployeeDO employee) {
 		employeeRepository.save(turnMetoEntity(employee));
+	}
+
+
+	public List<Employee> getEmployees() {
+		return  employeeRepository.findAll();
 	}
 
 	public void addEmployess(List<com.vkrajput.db.model.EmployeeDO> employees) {
