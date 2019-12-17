@@ -5,6 +5,14 @@ import com.vkrajput.db.model.EmployeeDO;
 
 public class EmployeeServiceHelper {
 
+    /**
+     *
+     * Convert DO Object to Entity
+     *
+     * @param employee
+     * @return
+     */
+
     public static com.vkrajput.db.entity.Employee toEntity(com.vkrajput.db.model.EmployeeDO employee) {
         com.vkrajput.db.entity.Employee employeeEntity = new com.vkrajput.db.entity.Employee();
         employeeEntity.setAge(employee.getAge());
@@ -12,6 +20,14 @@ public class EmployeeServiceHelper {
         employeeEntity.setLastName(employee.getLastName());
         return employeeEntity;
     }
+
+    /**
+     *
+     * Convert entity Object to DO
+     *
+     * @param employee
+     * @return
+     */
 
 
     public static EmployeeDO toEmployeeDO(Employee employee) {
