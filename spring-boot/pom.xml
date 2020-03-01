@@ -29,6 +29,7 @@
 		<module>spring-boot-rest</module>
 		<module>spring-boot-gcp</module>
 		<module>spring-boot-kafka</module>
+		<module>spring-boot-integration</module>
 	</modules>
 	<developers>
 		<developer>
