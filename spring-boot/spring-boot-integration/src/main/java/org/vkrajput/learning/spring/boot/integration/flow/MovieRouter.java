@@ -13,7 +13,7 @@ public class MovieRouter {
     @Router(inputChannel = "movieDefaultRequestChannel")
     public String findNextRouter(Movie movie) {
 
-        logger.info("This is movie.getMovieCountry ==>"+movie.getMovieCountry());
+        logger.info("Movie.getMovieCountry ==>" + movie.getMovieCountry());
 
         switch (movie.getMovieCountry()) {
             case INDIA:
