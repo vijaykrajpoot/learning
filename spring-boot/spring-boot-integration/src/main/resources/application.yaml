@@ -1,0 +1,14 @@
+
+
+logging:
+    pattern:
+        console: "%clr(%d{yy-MM-dd E HH:mm:ss.SSS}){blue} %clr(%-5p) %clr(${PID}){faint} %clr(---){faint} %clr([%8.15t]){cyan} %clr(%-40.40logger{0}){blue} %clr(:){red} %clr(%m){faint}%n"
+    level:
+        org.springframework: DEBUG
+        com.sony.sie.loyalty.: DEBUG
+        org.springframework.boot.autoconfigure: INFO
+        org.springframework.orm.jpa: DEBUG
+        org.springframework.integration: DEBUG
+        org.springframework.transaction: DEBUG
+        org.springframework.web: DEBUG
+        org.springframework.web.filter.CommonsRequestLoggingFilter: DEBUG
